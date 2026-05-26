@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Raylib Ray Tracing (MSYS2 MinGW64)",
+      "type": "shell",
+      "command": "C:\\msys64\\mingw64\\bin\\gcc.exe",
+      "args": [
+        "-g",
+        "-Wall",
+        "-Wextra",
+
+        "ray_tracing_raylib.c",
+
+        "-IC:\\msys64\\mingw64\\include",
+        "-LC:\\msys64\\mingw64\\lib",
+
+        "-lraylib",
+        "-lopengl32",
+        "-lgdi32",
+        "-lwinmm",
+
+        "-o",
+        "ray_tracing_raylib.exe"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
